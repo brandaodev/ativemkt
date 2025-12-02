@@ -3,644 +3,757 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ATIVE MKT - Agência de Marketing Digital</title>
     <meta
       name="description"
-      content="Transforme sua Presença Digital em Resultados Reais. Criação de sites, gestão de tráfego pago e otimização do Google Meu Negócio."
+      content="Transforme seu Google Meu Negócio em uma máquina de atrair clientes locais. +500 negócios locais já confiam em nosso trabalho."
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/x-icon" href="image/favicon.ico" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="image/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="image/favicon-16x16.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="image/apple-touch-icon.png"
-    />
-    <!-- PARTICLES.JS: CDN incluído no head -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
+    <title>Ative MKT Digital - Google Meu Negócio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/components.css" />
   </head>
   <body>
-    <!-- Header Fixo -->
-    <header class="header" id="header">
-      <nav class="nav container">
-        <div class="nav__brand">
-          <h2>ATIVE MKT</h2>
-        </div>
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#home" class="nav__link">Início</a>
-            </li>
-            <li class="nav__item">
-              <a href="#about" class="nav__link">Sobre</a>
-            </li>
-            <li class="nav__item">
-              <a href="#services" class="nav__link">Serviços</a>
-            </li>
-            <li class="nav__item">
-              <a href="#portfolio" class="nav__link">Portfólio</a>
-            </li>
-            <!-- <li class="nav__item">
-              <a href="#results" class="nav__link">Resultados</a>
-            </li>
-            <li class="nav__item">
-              <a href="#testimonials" class="nav__link">Depoimentos</a>
-            </li>-->
-          </ul>
-          <button class="nav__close" id="nav-close">
-            <i class="fas fa-times"></i>
+    <!-- Header -->
+    <header id="header">
+      <nav class="container">
+        <div class="nav-wrapper">
+          <div class="logo">Ative MKT Digital</div>
+
+          <!-- Desktop Navigation -->
+          <div class="nav-desktop">
+            <button onclick="scrollToSection('services')" class="nav-link">
+              Serviços
+            </button>
+            <button onclick="scrollToSection('testimonials')" class="nav-link">
+              Depoimentos
+            </button>
+            <button onclick="scrollToSection('contact')" class="nav-link">
+              Contato
+            </button>
+            <button
+              onclick="scrollToSection('contact')"
+              class="btn btn-primary"
+            >
+              Fale Conosco
+            </button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="mobile-menu-btn"
+            onclick="toggleMobileMenu()"
+            aria-label="Menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
           </button>
         </div>
-        <div class="nav__actions">
-          <a href="#contact" class="btn btn--primary nav__cta">Fale Conosco</a>
-          <button class="nav__toggle" id="nav-toggle">
-            <i class="fas fa-bars"></i>
+
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="nav-mobile">
+          <button onclick="scrollToSection('services')" class="nav-link-mobile">
+            Serviços
+          </button>
+          <button
+            onclick="scrollToSection('testimonials')"
+            class="nav-link-mobile"
+          >
+            Depoimentos
+          </button>
+          <button onclick="scrollToSection('contact')" class="nav-link-mobile">
+            Contato
+          </button>
+          <button
+            onclick="scrollToSection('contact')"
+            class="btn btn-primary btn-full"
+          >
+            Fale Conosco
           </button>
         </div>
       </nav>
     </header>
 
-    <!-- WhatsApp Button -->
-    <div class="whatsapp-float">
-      <a
-        href="https://wa.me/5511999999999"
-        target="_blank"
-        class="whatsapp-btn"
-      >
-        <i class="fab fa-whatsapp"></i>
-      </a>
-    </div>
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+          <div class="hero-badge">
+            <span class="badge-icon">✓</span>
+            <span>Especialistas em Google Meu Negócio</span>
+          </div>
 
-    <!-- Hero Section - Split Layout com Particles -->
-    <section class="hero" id="home">
-      <!-- PARTICLES: Hero Section - Laranja interativo -->
-      <div
-        id="particles-hero"
-        class="particles-container particles-interactive"
-      ></div>
-      <div class="container">
-        <div class="hero__wrapper">
-          <div class="hero__content">
-            <h1 class="hero__title">
-              Transforme sua Presença Digital em Resultados Reais
-            </h1>
-            <p class="hero__description">
-              Criação de sites, gestão de tráfego pago e otimização do Google
-              Meu Negócio para empresas que querem crescer online
-            </p>
-            <div class="hero__actions">
-              <a href="#contact" class="btn btn--primary btn--lg"
-                >Começar Agora</a
+          <h1 class="hero-title">
+            Seja Encontrado Por Clientes
+            <span class="gradient-text">da Sua Região</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Transforme seu Google Meu Negócio em uma máquina de atrair clientes
+            locais
+          </p>
+
+          <p class="hero-social-proof">
+            +500 negócios locais já confiam em nosso trabalho
+          </p>
+
+          <div class="hero-buttons">
+            <button
+              onclick="scrollToSection('contact')"
+              class="btn btn-primary btn-lg"
+            >
+              Solicitar Análise Gratuita
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
               >
-              <a href="#services" class="btn btn--outline btn--lg"
-                >Nossos Serviços</a
-              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+            <button
+              onclick="scrollToSection('gmb-section')"
+              class="btn btn-outline btn-lg"
+            >
+              Como Funciona
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="stats-section">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item" data-stat="73">
+              <div class="stat-value gradient-text">
+                <span class="stat-number">0</span>%
+              </div>
+              <p class="stat-label">das buscas no Google são locais</p>
+            </div>
+            <div class="stat-item" data-stat="88">
+              <div class="stat-value gradient-text">
+                <span class="stat-number">0</span>%
+              </div>
+              <p class="stat-label">visitam em 24h após busca local</p>
+            </div>
+            <div class="stat-item" data-stat="150">
+              <div class="stat-value gradient-text">
+                <span class="stat-number">0</span>%
+              </div>
+              <p class="stat-label">aumento médio em visitas</p>
+            </div>
+            <div class="stat-item" data-stat="500">
+              <div class="stat-value gradient-text">
+                <span class="stat-number">0</span>+
+              </div>
+              <p class="stat-label">negócios atendidos</p>
             </div>
           </div>
-          <div class="hero__image">
-            <!-- IMAGEM: Hero - URLs simplificadas sem parâmetros complexos -->
-            <img
-              src="image/rocket.png"
-              alt="Equipe ATIVE MKT trabalhando"
-              class="hero__img rocket-pulse"
-            />
-          </div>
-          <!--<div class="rocket-container">
-            <img src="image/rocket.png" alt="Rocket" class="rocket-pulse" />
-          </div>-->
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-      <!-- PARTICLES: About Section - Sutil -->
-      <div id="particles-about" class="particles-container"></div>
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Sobre a ATIVE MKT</h2>
-          <p class="section-description">
-            Especialistas em soluções digitais completas
-          </p>
-        </div>
-        <div class="about__content">
-          <div class="about__text">
-            <h3>Quem Somos</h3>
+      <!-- GMB Section -->
+      <section id="gmb-section" class="gmb-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Por Que o Google Meu Negócio é Essencial?</h2>
             <p>
-              Somos uma agência especializada em soluções digitais completas.
-              Com experiência comprovada, ajudamos empresas a conquistarem mais
-              visibilidade, leads qualificados e vendas através de estratégias
-              personalizadas.
+              Domine as buscas locais e conquiste mais clientes na sua região
             </p>
-            <div class="about__features">
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <span>Estratégias personalizadas</span>
-              </div>
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <span>Resultados mensuráveis</span>
-              </div>
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <span>Suporte especializado</span>
-              </div>
-            </div>
           </div>
-          <div class="about__visual">
-            <!-- IMAGEM: Sobre - URL simplificada -->
-            <img
-              src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600"
-              alt="Escritório ATIVE MKT"
-              class="about__image"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Nossos Serviços</h2>
-          <p class="section-description">
-            Soluções completas para seu crescimento digital
-          </p>
-        </div>
-        <div class="services__grid">
-          <div class="service-card" data-aos="fade-up">
-            <div class="service-card__header">
-              <div class="service-card__icon">
-                <i class="fas fa-laptop-code"></i>
+          <div class="gmb-grid">
+            <div class="gmb-card">
+              <div class="gmb-icon bg-primary">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
               </div>
-              <h3 class="service-card__title">Websites Profissionais</h3>
-            </div>
-            <div class="service-card__image">
-              <!-- IMAGEM: Serviço 1 - URL simplificada -->
-              <img
-                src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=300"
-                alt="Websites Profissionais"
-              />
-              <div class="service-card__overlay"></div>
-            </div>
-            <div class="service-card__content">
-              <p class="service-card__description">
-                Sites modernos, responsivos e otimizados para conversão
+              <h3>Visibilidade Local</h3>
+              <p>
+                Apareça no mapa e nas buscas quando clientes procuram por
+                serviços na sua área
               </p>
-              <ul class="service-card__features">
-                <li>Design responsivo</li>
-                <li>SEO otimizado</li>
-                <li>Velocidade de carregamento</li>
-                <li>Experiência do usuário</li>
+            </div>
+
+            <div class="gmb-card">
+              <div class="gmb-icon bg-success">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3>Mais Clientes</h3>
+              <p>
+                Atraia clientes qualificados que estão prontos para comprar ou
+                contratar
+              </p>
+            </div>
+
+            <div class="gmb-card">
+              <div class="gmb-icon bg-secondary">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  ></polygon>
+                </svg>
+              </div>
+              <h3>Credibilidade</h3>
+              <p>
+                Construa confiança com avaliações e informações completas do seu
+                negócio
+              </p>
+            </div>
+
+            <div class="gmb-card">
+              <div class="gmb-icon bg-accent">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path
+                    d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                  ></path>
+                </svg>
+              </div>
+              <h3>Gratuito</h3>
+              <p>
+                Aproveite uma ferramenta poderosa sem custos de anúncio, apenas
+                otimização
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section id="how-it-works" class="how-it-works-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Como Funciona Nossa Metodologia</h2>
+            <p>Processo comprovado em 4 etapas simples</p>
+          </div>
+
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <h3>Análise</h3>
+              <p>
+                Avaliamos seu perfil atual e identificamos oportunidades de
+                melhoria
+              </p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <h3>Otimização</h3>
+              <p>
+                Configuramos e otimizamos cada detalhe do seu Google Meu Negócio
+              </p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <h3>Gestão</h3>
+              <p>Gerenciamos postagens, fotos e interações com clientes</p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-number">4</div>
+              <h3>Resultados</h3>
+              <p>Acompanhe o crescimento com relatórios detalhados mensais</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="services-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Nossos Serviços</h2>
+            <p>Soluções completas para dominar o marketing local</p>
+          </div>
+
+          <div class="services-grid">
+            <div class="service-card">
+              <h3>Google Meu Negócio</h3>
+              <p>Otimização completa e gestão mensal do seu perfil</p>
+              <ul class="service-features">
+                <li>✓ Configuração completa</li>
+                <li>✓ Postagens semanais</li>
+                <li>✓ Gestão de avaliações</li>
+                <li>✓ Relatórios mensais</li>
+              </ul>
+            </div>
+
+            <div class="service-card">
+              <h3>Tráfego Pago Local</h3>
+              <p>Anúncios segmentados para sua região</p>
+              <ul class="service-features">
+                <li>✓ Google Ads local</li>
+                <li>✓ Facebook/Instagram Ads</li>
+                <li>✓ Segmentação por raio</li>
+                <li>✓ Otimização de conversão</li>
+              </ul>
+            </div>
+
+            <div class="service-card featured">
+              <div class="featured-badge">Mais Popular</div>
+              <h3>Pacote Completo</h3>
+              <p>Solução 360º para marketing local</p>
+              <ul class="service-features">
+                <li>✓ Tudo do GMB</li>
+                <li>✓ Tudo do Tráfego Pago</li>
+                <li>✓ Site profissional</li>
+                <li>✓ Suporte prioritário</li>
               </ul>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card__header">
-              <div class="service-card__icon">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <h3 class="service-card__title">Tráfego Pago</h3>
-            </div>
-            <div class="service-card__image">
-              <!-- IMAGEM: Serviço 2 - URL simplificada -->
-              <img
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300"
-                alt="Tráfego Pago"
-              />
-              <div class="service-card__overlay"></div>
-            </div>
-            <div class="service-card__content">
-              <p class="service-card__description">
-                Campanhas estratégicas no Google Ads e Meta Ads com foco em ROI
+      <!-- Testimonials -->
+      <section id="testimonials" class="testimonials-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>O Que Nossos Clientes Dizem</h2>
+            <p>Histórias reais de sucesso</p>
+          </div>
+
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Em 3 meses, triplicamos as ligações de novos clientes. O
+                investimento se pagou rapidamente!"
               </p>
-              <ul class="service-card__features">
-                <li>Google Ads</li>
-                <li>Facebook e Instagram Ads</li>
-                <li>Remarketing</li>
-                <li>Análise de ROI</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card__header">
-              <div class="service-card__icon">
-                <i class="fas fa-map-marker-alt"></i>
+              <div class="testimonial-author">
+                <strong>João Silva</strong>
+                <span>Restaurante Vila Maria</span>
               </div>
-              <h3 class="service-card__title">Google Meu Negócio</h3>
             </div>
-            <div class="service-card__image">
-              <!-- IMAGEM: Serviço 3 - URL simplificada -->
-              <img
-                src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300"
-                alt="Google Meu Negócio"
-              />
-              <div class="service-card__overlay"></div>
-            </div>
-            <div class="service-card__content">
-              <p class="service-card__description">
-                Otimização e gestão do seu perfil para atrair clientes locais
+
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Agora apareço sempre nas primeiras posições quando alguém busca
+                salão de beleza na região."
               </p>
-              <ul class="service-card__features">
-                <li>Otimização de perfil</li>
-                <li>Gestão de avaliações</li>
-                <li>Posts estratégicos</li>
-                <li>Análise de métricas</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Nosso Portfólio</h2>
-          <p class="section-description">
-            Projetos que geraram resultados reais
-          </p>
-        </div>
-        <div class="portfolio__grid">
-          <div class="portfolio-card" data-aos="fade-up">
-            <div class="portfolio-card__image">
-              <!-- IMAGEM: Portfolio 1 - URL simplificada -->
-              <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300"
-                alt="Site Institucional"
-              />
-              <div class="portfolio-card__overlay">
-                <div class="portfolio-card__info">
-                  <h4>Site Institucional</h4>
-                  <p>Site completo com integração de pagamento</p>
-                  <span class="portfolio-card__category">Website</span>
-                </div>
+              <div class="testimonial-author">
+                <strong>Maria Santos</strong>
+                <span>Salão Bella Vita</span>
               </div>
             </div>
-            <div class="portfolio-card__content">
-              <h4 class="portfolio-card__title">Site Institucional</h4>
-              <p class="portfolio-card__description">
-                Projeto completo para empresa do setor varejista: estruturação
-                do site, integração de WhatsApp e otimização SEO.
+
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                "A equipe é super atenciosa e os resultados apareceram logo no
+                primeiro mês. Recomendo!"
               </p>
-              <div class="portfolio-card__stats">
-                <span class="stat">+100% Visitas</span>
-                <span class="stat">+85 interações</span>
+              <div class="testimonial-author">
+                <strong>Carlos Mendes</strong>
+                <span>Clínica Odontológica Sorriso</span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Perguntas Frequentes</h2>
+            <p>Tire suas dúvidas sobre nossos serviços</p>
           </div>
 
-          <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="portfolio-card__image">
-              <!-- IMAGEM: Portfolio 2 - URL simplificada -->
-              <img
-                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300"
-                alt="Gestão de Tráfego Pago"
-              />
-              <div class="portfolio-card__overlay">
-                <div class="portfolio-card__info">
-                  <h4>Gestão de Tráfego Pago</h4>
-                  <p>ROI de 200% em campanhas Meta Ads</p>
-                  <span class="portfolio-card__category">Tráfego Pago</span>
-                </div>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFAQ(this)">
+                <span>Quanto tempo leva para ver resultados?</span>
+                <svg
+                  class="faq-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Os primeiros resultados geralmente aparecem entre 15-30 dias.
+                  Melhoria significativa em visibilidade e ligações costuma
+                  ocorrer dentro de 60-90 dias.
+                </p>
               </div>
             </div>
-            <div class="portfolio-card__content">
-              <h4 class="portfolio-card__title">Gestão de Tráfego Pago</h4>
-              <p class="portfolio-card__description">
-                Gestão completa de campanhas Meta Ads para regional de serviços:
-                segmentação, copy, landing page.
-              </p>
-              <div class="portfolio-card__stats">
-                <span class="stat">ROI 200%</span>
-                <span class="stat">+90 Leads</span>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFAQ(this)">
+                <span>Preciso ter um site?</span>
+                <svg
+                  class="faq-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Não é obrigatório, mas é altamente recomendado. Podemos
+                  incluir a criação de um site profissional no pacote completo.
+                </p>
               </div>
             </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFAQ(this)">
+                <span>Qual a diferença entre GMB e tráfego pago?</span>
+                <svg
+                  class="faq-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  GMB é orgânico e gratuito, mas requer otimização. Tráfego pago
+                  traz resultados mais rápidos mas tem custo de anúncios.
+                  Recomendamos usar ambos para melhores resultados.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFAQ(this)">
+                <span>Vocês trabalham com qualquer tipo de negócio?</span>
+                <svg
+                  class="faq-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Sim! Atendemos restaurantes, clínicas, lojas, salões,
+                  academias, prestadores de serviços e diversos outros segmentos
+                  locais.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Solicite Sua Análise Gratuita</h2>
+            <p>
+              Descubra como podemos aumentar a visibilidade do seu negócio local
+            </p>
           </div>
 
-          <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="portfolio-card__image">
-              <!-- IMAGEM: Portfolio 3 - URL simplificada -->
-              <img
-                src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=400&h=300"
-                alt="Otimização Google Meu Negócio"
-              />
-              <div class="portfolio-card__overlay">
-                <div class="portfolio-card__info">
-                  <h4>Otimização Google Meu Negócio</h4>
-                  <p>150% aumento na visibilidade local</p>
-                  <span class="portfolio-card__category"
-                    >Google Meu Negócio</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-card__content">
-              <h4 class="portfolio-card__title">
-                Otimização Google Meu Negócio
-              </h4>
-              <p class="portfolio-card__description">
-                Empresa local do segmento de saúde: configuração de perfil,
-                fotos e coleta de avaliações.
-              </p>
-              <div class="portfolio-card__stats">
-                <span class="stat">+150% Visibilidade</span>
-                <span class="stat">4.9★ Avaliação</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Results Section -->
-    <section class="results" id="results">
-      <!-- PARTICLES: Results Section - Branco vibrante -->
-      <div
-        id="particles-results"
-        class="particles-container particles-interactive"
-      ></div>
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Nossos Resultados</h2>
-          <p class="section-description">
-            Números que comprovam nossa expertise
-          </p>
-        </div>
-        <div class="results__grid">
-          <div class="result-item" data-aos="fade-up">
-            <div class="result-item__number" data-count="60">0+</div>
-            <div class="result-item__label">Sites Criados</div>
-          </div>
-          <div class="result-item" data-aos="fade-up" data-aos-delay="100">
-            <div class="result-item__number" data-count="150">0+</div>
-            <div class="result-item__label">Campanhas Otimizadas</div>
-          </div>
-          <div class="result-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="result-item__number" data-count="100">0%</div>
-            <div class="result-item__label">Clientes Satisfeitos</div>
-          </div>
-          <div class="result-item" data-aos="fade-up" data-aos-delay="300">
-            <div class="result-item__number" data-count="800">0K+</div>
-            <div class="result-item__label">Investimento Gerenciado</div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--
-     // Testimonials Section
-    <section class="testimonials" id="testimonials">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
-          <p class="section-description">
-            Depoimentos de quem já cresceu conosco
-          </p>
-        </div>
-        <div class="testimonials__grid">
-          <div class="testimonial-card" data-aos="fade-up">
-            <div class="testimonial-card__content">
+          <div class="contact-grid">
+            <!-- Contact Info -->
+            <div class="contact-info">
+              <h3>Comece a Atrair Mais Clientes Locais</h3>
               <p>
-                "A Ative MKT transformou nossa presença online. Triplicamos
-                nossas vendas em 6 meses!"
+                Preencha o formulário e receba uma análise gratuita do seu
+                Google Meu Negócio. Vamos identificar oportunidades para colocar
+                seu negócio no topo das buscas locais!
               </p>
-            </div>
-            <div class="testimonial-card__author">
-              // IMAGEM: Avatar 1 - URL simplificada
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80"
-                alt="Carlos Silva"
-                class="testimonial-card__avatar"
-              />
-              <div class="testimonial-card__info">
-                <h4>Carlos Silva</h4>
-                <span>Construtora Silva</span>
-                <div class="testimonial-card__stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+
+              <div class="contact-details">
+                <div class="contact-detail">
+                  <div class="contact-icon bg-primary">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                      ></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4>Email</h4>
+                    <p>contato@ativemkt.com.br</p>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-icon bg-success">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4>Telefone</h4>
+                    <p>(11) 9999-9999</p>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-icon bg-secondary">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                      ></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4>Localização</h4>
+                    <p>São Paulo, SP - Brasil</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimonial-card__content">
-              <p>
-                "O trabalho da Ative MKT com Google Meu Negócio aumentou nossa
-                visibilidade local em 250%. Recomendo!"
-              </p>
-            </div>
-            <div class="testimonial-card__author">
-              // IMAGEM: Avatar 2 - URL simplificada
-              <img
-                src="https://images.unsplash.com/photo-1494790108755-2616b612b632?w=80&h=80"
-                alt="Maria Santos"
-                class="testimonial-card__avatar"
-              />
-              <div class="testimonial-card__info">
-                <h4>Maria Santos</h4>
-                <span>Clínica Estética Bella</span>
-                <div class="testimonial-card__stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="testimonial-card__content">
-              <p>
-                "ROI excepcional nas campanhas de tráfego pago da Ative MKT.
-                Investimento que realmente vale a pena!"
-              </p>
-            </div>
-            <div class="testimonial-card__author">
-              //IMAGEM: Avatar 3 - URL simplificada
-              <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80"
-                alt="João Oliveira"
-                class="testimonial-card__avatar"
-              />
-              <div class="testimonial-card__info">
-                <h4>João Oliveira</h4>
-                <span>E-commerce ModaStyle</span>
-                <div class="testimonial-card__stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
--->
-    <!-- CTA Section
-    <section class="cta" id="contact">
-      <div class="cta__background">
-        <img
-          src="https://images.unsplash.com/photo-1553028826-f4804151e0d0?w=800&h=600"
-          alt="Marketing Digital"
-          class="cta__bg-image"
-        />
-        <div class="cta__overlay"></div>
-      </div>
-      <div class="container">
-        <div class="cta__content">
-          <h2 class="cta__title">Pronto para Acelerar seus Resultados?</h2>
-          <p class="cta__description">
-            Entre em contato conosco e descubra como podemos ajudar sua empresa
-            a crescer no digital
-          </p>
-          <div class="cta__form">
-            <form class="contact-form" id="contact-form">
-              <div class="form-row">
-                <div class="form-group">
-                  <input
-                    type="text"
-                    name="name"
-                    class="form-control"
-                    placeholder="Seu nome"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <input
-                    type="email"
-                    name="email"
-                    class="form-control"
-                    placeholder="Seu email"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="form-group">
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+              <form id="contactForm" class="contact-form">
                 <input
                   type="text"
-                  name="company"
-                  class="form-control"
-                  placeholder="Nome da sua empresa"
-                />
-              </div>
-              <div class="form-group">
-                <textarea
-                  name="message"
-                  class="form-control"
-                  rows="4"
-                  placeholder="Como podemos ajudar sua empresa?"
+                  id="name"
+                  placeholder="Seu nome *"
                   required
+                />
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Seu email *"
+                  required
+                />
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="Seu telefone *"
+                  required
+                />
+
+                <select id="businessType" required>
+                  <option value="">Tipo de Negócio *</option>
+                  <option value="restaurante">Restaurante/Bar</option>
+                  <option value="clinica">Clínica/Consultório</option>
+                  <option value="loja">Loja/Comércio</option>
+                  <option value="salao">Salão de Beleza/Estética</option>
+                  <option value="academia">Academia/Esportes</option>
+                  <option value="servicos">Prestador de Serviços</option>
+                  <option value="outro">Outro</option>
+                </select>
+
+                <select id="serviceInterest" required>
+                  <option value="">Serviço de Interesse *</option>
+                  <option value="gmb">Google Meu Negócio</option>
+                  <option value="trafego">Tráfego Pago</option>
+                  <option value="website">Criação de Site</option>
+                  <option value="completo">Pacote Completo</option>
+                </select>
+
+                <textarea
+                  id="message"
+                  placeholder="Conte-nos sobre seu negócio (opcional)"
+                  rows="4"
                 ></textarea>
+
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="wantAnalysis" />
+                  <label for="wantAnalysis">
+                    Quero receber uma <strong>análise gratuita</strong> do meu
+                    perfil do Google Meu Negócio
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg btn-full">
+                  Solicitar Análise Gratuita
+                </button>
+
+                <p class="form-footer">
+                  Ou fale conosco pelo
+                  <a
+                    href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os serviços da Ative MKT Digital"
+                    target="_blank"
+                    class="whatsapp-link"
+                    >WhatsApp</a
+                  >
+                </p>
+              </form>
+
+              <div
+                id="formSuccess"
+                class="form-message success"
+                style="display: none"
+              >
+                <strong>Mensagem enviada!</strong> Entraremos em contato em
+                breve.
               </div>
-              <button type="submit" class="btn btn--primary btn--full-width">
-                Enviar Mensagem
-              </button>
-            </form>
+
+              <div
+                id="formError"
+                class="form-message error"
+                style="display: none"
+              >
+                <strong>Erro!</strong> Por favor, preencha todos os campos
+                obrigatórios.
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section> -->
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <div class="footer__content">
-          <div class="footer__brand">
-            <h3>ATIVE MKT</h3>
-            <p>Transforme sua presença digital em resultados reais</p>
-            <div class="footer__social">
-              <!-- <a href="#" class="social-link"
-                ><i class="fab fa-facebook"></i
-              ></a>
-              <a href="#" class="social-link"
-                ><i class="fab fa-instagram"></i
-              ></a>-->
-              <a
-                href="https://www.linkedin.com/company/ative-marketing-digital/" target="_blank" rel="noopener noreferrer""
-                class="social-link"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-              <!-- <a href="#" class="social-link"><i class="fab fa-youtube"></i></a> -->
-            </div>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-logo">Ative MKT Digital</div>
+            <p>Especialistas em marketing local e Google Meu Negócio</p>
           </div>
-          <div class="footer__links">
+
+          <div class="footer-col">
             <h4>Serviços</h4>
             <ul>
-              <li><a href="#services">Websites</a></li>
+              <li><a href="#gmb-section">Google Meu Negócio</a></li>
               <li><a href="#services">Tráfego Pago</a></li>
-              <li><a href="#services">Google Meu Negócio</a></li>
-              <li><a href="#services">Consultoria</a></li>
+              <li><a href="#services">Criação de Sites</a></li>
+              <li><a href="#services">Pacote Completo</a></li>
             </ul>
           </div>
-          <div class="footer__contact">
+
+          <div class="footer-col">
+            <h4>Empresa</h4>
+            <ul>
+              <li><a href="#testimonials">Depoimentos</a></li>
+              <li><a href="#contact">Contato</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
             <h4>Contato</h4>
             <ul>
-              <li><i class="fas fa-envelope"></i> contato@ativemkt.com.br</li>
-              <li><i class="fas fa-phone"></i> +55 12 98225-3257</li>
-              <li><i class="fas fa-map-marker-alt"></i> Taubaté, SP</li>
+              <li>contato@ativemkt.com.br</li>
+              <li>(11) 9999-9999</li>
+              <li>São Paulo, SP</li>
             </ul>
           </div>
         </div>
 
-        <!-- CERTIFICAÇÕES: Footer com imagens reais -->
-        <div class="footer__certifications">
-          <h4>Certificações e Parcerias</h4>
-          <div class="certifications__grid">
-            <!-- IMAGEM: Certificação PMI - authorized-training-partner.jpg -->
-            <div class="certification-item">
-              <img
-                src="image/PMI-certificado.webp"
-                alt="PMI Authorized Training Partner"
-                class="certification__image"
-              />
-              <span class="certification__label">PMI Partner</span>
-            </div>
-            <!-- IMAGEM: Certificação Google - 3c516581-e414-462c-b539-cf352ca6552d.jpg -->
-            <div class="certification-item">
-              <img
-                src="image/google-certificado.webp"
-                alt="Google Partner Certification"
-                class="certification__image"
-              />
-              <span class="certification__label">Google Certified</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer__bottom">
-          <p>&copy; 2025 ATIVE MKT. Todos os direitos reservados.</p>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Ative MKT Digital. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
-    <!-- Custom Cursor: bolinha laranja -->
-    <div id="custom-cursor"></div>
 
-    <script src="app.js"></script>
+    <!-- WhatsApp Button -->
+    <a
+      href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os serviços da Ative MKT Digital"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="WhatsApp"
+    >
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        />
+      </svg>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/components.js"></script>
   </body>
 </html>
